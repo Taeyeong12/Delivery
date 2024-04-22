@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     
 
-<%@ include file="/WEB-INF/views/include/link.jsp" %>
-<link rel="stylesheet" href="/css/layout/nav.css">
-<link rel="stylesheet" href="/css/home.css">
- 
+<jsp:include page="include/link.jsp" />
+<link rel="stylesheet" href="<c:url value='/resources/css/layout/nav.css'/>">
+<link rel="stylesheet" href="<c:url value='/resources/css/home.css'/>">
 <%@ include file="/WEB-INF/views/include/header.jsp" %>
-
 
  	<!-- 콘텐츠 -->
     <div class="wrap">
@@ -38,7 +37,7 @@
                                 <li>
 									<div>
 										<div class="img_box">
-                                           <img src="/img/pizza2.png" alt="이미지">
+                                           <img src="resources/img/pizza2.png" alt="이미지">
 										</div>
                                     </div>
                                     <div class="name">피자</div>
@@ -47,7 +46,7 @@
                                 <li>
 									<div>
 										<div class="img_box">
-                                           <img src="/img/chicken1.png" alt="이미지">
+                                           <img src="resources/img/chicken1.png" alt="이미지">
 										</div>
                                     </div>
                                     <div class="name">치킨</div>
@@ -56,7 +55,7 @@
                                 <li>
 									<div>
 										<div class="img_box">
-                                           <img src="/img/hamburger4.png" alt="이미지">
+                                           <img src="resources/img/hamburger4.png" alt="이미지">
 										</div>
                                     </div>
                                     <div class="name">패스트푸드</div>
@@ -65,7 +64,7 @@
                                 <li>
 									<div>
 										<div class="img_box">
-                                           <img src="/img/bunsik1.png" alt="이미지">
+                                           <img src="resources/img/bunsik1.png" alt="이미지">
 										</div>
                                     </div>
                                     <div class="name">분식</div>
@@ -75,7 +74,7 @@
                                 <li>
 									<div>
 										<div class="img_box">
-                                           <img src="/img/dessert2.png" alt="이미지">
+                                           <img src="resources/img/dessert2.png" alt="이미지">
 										</div>
                                     </div>
                                     <div class="name">카페/디저트</div>
@@ -84,7 +83,7 @@
                                 <li>
 									<div>
 										<div class="img_box">
-                                           <img src="/img/cutlet1.png" alt="이미지">
+                                           <img src="resources/img/cutlet1.png" alt="이미지">
 										</div>
                                     </div>
                                     <div class="name">돈까스/일식</div>
@@ -93,7 +92,7 @@
                                 <li>
 									<div>
 										<div class="img_box">
-                                           <img src="/img/chinese1.png" alt="이미지">
+                                           <img src="resources/img/chinese1.png" alt="이미지">
 										</div>
                                     </div>
                                     <div class="name">중국집</div>
@@ -103,7 +102,7 @@
                                 <li>
 									<div>
 										<div class="img_box">
-                                           <img src="/img/jockbal1.png" alt="이미지">
+                                           <img src="resources/img/jockbal1.png" alt="이미지">
 										</div>
                                     </div>
                                     <div class="name">족발/보쌈</div>
@@ -112,7 +111,7 @@
                                 <li>
 									<div>
 										<div class="img_box">
-                                           <img src="/img/jockbal2.png" alt="이미지">
+                                           <img src="resources/img/jockbal2.png" alt="이미지">
 										</div>
                                     </div>
                                     <div class="name">야식</div>
@@ -121,7 +120,7 @@
                                 <li>
 									<div>
 										<div class="img_box">
-                                           <img src="/img/bibimbap.jpg" alt="이미지">
+                                           <img src="resources/img/bibimbap.jpg" alt="이미지">
 										</div>
                                     </div>
                                     <div class="name">한식</div>
@@ -130,7 +129,7 @@
                                 <li>
 									<div>
 										<div class="img_box">
-                                           <img src="/img/jockbal3.png" alt="이미지">
+                                           <img src="resources/img/jockbal3.png" alt="이미지">
 										</div>
                                     </div>
                                     <div class="name">1인분</div>
@@ -139,7 +138,7 @@
                                 <li>
 									<div>
 										<div class="img_box">
-                                           <img src="/img/dosirac.jpg" alt="이미지">
+                                           <img src="resources/img/dosirac.jpg" alt="이미지">
 										</div>
                                     </div>
                                     <div class="name">도시락</div>
@@ -156,7 +155,7 @@
     <!-- 하단 메뉴 -->
  
     <!-- 푸터 -->
-    <%@ include file="/WEB-INF/views//include/footer.jsp" %>
+    <%@ include file="/WEB-INF/views/include/footer.jsp" %>
     <!-- 푸터 -->
 
 <script>
