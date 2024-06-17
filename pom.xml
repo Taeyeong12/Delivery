@@ -198,6 +198,37 @@
 	    <version>2.14.2</version>
 	</dependency>
 
+	<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+	<dependency>
+	    <groupId>org.projectlombok</groupId>
+	    <artifactId>lombok</artifactId>
+	    <version>1.18.26</version>
+	    <scope>provided</scope>
+	</dependency>
+	
+	    <!-- JSR-303/JSR-380 API -->
+    <dependency>
+        <groupId>javax.validation</groupId>
+        <artifactId>validation-api</artifactId>
+        <version>2.0.1.Final</version>
+    </dependency>
+
+    <!-- Hibernate Validator (JSR-303/JSR-380 구현체) -->
+    <dependency>
+        <groupId>org.hibernate.validator</groupId>
+        <artifactId>hibernate-validator</artifactId>
+        <version>6.0.13.Final</version>
+    </dependency>
+
+    <!-- Optional: JSR-303/JSR-380에 대한 JSR-341 EL (Expression Language) 지원 -->
+    <dependency>
+        <groupId>org.glassfish</groupId>
+        <artifactId>javax.el</artifactId>
+        <version>3.0.0</version>
+    </dependency>
+	
+	
+	
    </dependencies>
     <build>
         <plugins>
