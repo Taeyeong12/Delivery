@@ -4,8 +4,7 @@
 
 
 <jsp:include page="include/link.jsp" />
-<link rel="stylesheet"
-	href="<c:url value='/resources/css/layout/nav.css'/>">
+<link rel="stylesheet" href="<c:url value='/resources/css/layout/nav.css'/>">
 <link rel="stylesheet" href="<c:url value='/resources/css/home.css'/>">
 <%@ include file="/WEB-INF/views/include/header.jsp"%>
 
