@@ -7,12 +7,14 @@ import java.util.Map;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.springmvc.dto.Join;
 import com.springmvc.service.UserService;
@@ -23,6 +25,10 @@ public class UserController {
 	
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private BCryptPasswordEncoder pwdEncoder;
+
 
 	
 	@GetMapping("/myPage")
@@ -65,9 +71,29 @@ public class UserController {
 			return "user/join";
 		}
 		
+		String encPwd = pwdEncoder.encode(join.getPassword());
+		join.setPassword(encPwd);
 		userService.join(join);
+
 		return "redirect:/login";
 	}
+	
+	
+	//Ajax
+	@ResponseBody
+	@GetMapping("/overlapCheck")
+	public int overlapCheck(String value, String valueType) {
+//		value = 중복체크할 값
+//		valeuType = username, nickname
+		System.out.println(value);
+		System.out.println(valueType);
+		int count = userService.overlapCheck(value, valueType);
+		
+		System.out.println(count);
+		return count;
+	}
+
+	
 	
 	
 }
