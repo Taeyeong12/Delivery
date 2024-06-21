@@ -57,7 +57,7 @@ function overlapCheck(data) {
 	
 	let isUseable = false;
 	$.ajax({
-		url: "/overlapCheck",
+		url: "overlapCheck",
 		type: "get",
 		data: data,
 		async: false

@@ -5,7 +5,8 @@
 
 <html>
 <head>
-<link rel="stylesheet" href="/css/user/login.css">
+<link rel="stylesheet" href="resources/css/login.css">
+
 </head>
 <body>
     <main>

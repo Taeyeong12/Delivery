@@ -13,6 +13,8 @@ import lombok.ToString;
 @ToString
 public class Join {
 	
+	
+	
 	@Pattern(regexp = "[A-Za-z0-9]{4,15}$", message = "아이디는 영어, 숫자 4 ~15자리로 입력 가능합니다")
 	private String username;
 	
