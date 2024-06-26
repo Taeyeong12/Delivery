@@ -9,6 +9,12 @@
 
 </head>
 <body>
+	<c:if test="${!empty loginFailMsg }">
+	    <script type="text/javascript">
+	        const msg = "${loginFailMsg}";
+	        swal(msg);
+	    </script>
+	</c:if>
     <main>
         <div class="login_box">
 			<a href="/"><img src="/img/bamin2.png" alt="이미지" class="bm_img"></a>    

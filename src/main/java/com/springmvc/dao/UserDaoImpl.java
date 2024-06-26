@@ -5,6 +5,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.springmvc.dto.Join;
+import com.springmvc.dto.User;
 
 
 @Repository
@@ -29,6 +30,13 @@ public class UserDaoImpl implements UserDao {
     public int overlapCheck(String value, String valueType) {
         String sql = "SELECT COUNT(*) FROM BM_USER WHERE " + valueType + " = ?";
         return jdbcTemplate.queryForObject(sql, new Object[]{value}, Integer.class);
+    }
+
+
+    @Override
+    public User findUserByUsername(String username) {
+        String sql = "SELECT * FROM BM_USER WHERE USERNAME = ?";
+        return jdbcTemplate.queryForObject(sql, new Object[]{username}, new UserRowMapper());
     }
 
 }

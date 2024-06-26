@@ -22,8 +22,7 @@ public class LoginService implements UserDetails, Serializable {
 
     private User user;
     
-    public LoginService(User user) {
-        this.user = user;
+    public LoginService() {
     }
 
     @Override
