@@ -19,8 +19,7 @@
         <div class="login_box">
 			<a href="/"><img src="/img/bamin2.png" alt="이미지" class="bm_img"></a>    
             
-            <form action="/login" method="post">
- 
+            <form action="${pageContext.request.contextPath}/login" method="post">
 	            <div class="input_aera"><input type="text" name="username"  value="" required placeholder="이메일을 입력해 주세요" maxlength="30" ></div>
 	            <div class="input_aera"><input type="password" name="password" value="" required placeholder="비밀번호를 입력해 주세요" maxlength="30"></div>
  

@@ -1,15 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
-<html>
-<head>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 
 <%@ include file="/WEB-INF/views/include/link.jsp"%>
-<link rel="stylesheet" href="/css/layout/nav.css">
-<link rel="stylesheet" href="/css/user/myPage.css">
- 
+<link rel="stylesheet" href="<c:url value='/resources/css/layout/nav.css'/>">
+<link rel="stylesheet" href="<c:url value='/resources/css/user/myPage.css'/>">
 <%@ include file="/WEB-INF/views/include/header.jsp"%>
+
+
 	<div class="wrap"> 
  
 	    <section class="title">
