@@ -22,7 +22,7 @@
 		    	<div class="grid_box">
 		    		<div class="login_box">
 	    				 <c:if test="${empty SPRING_SECURITY_CONTEXT }">
-	                         <a href="/login"><span>로그인 해주세요 :)</span></a>
+	                         <a href="login"><span>로그인 해주세요 :)</span></a>
 	                    </c:if>
 	                    
 	                    
@@ -37,7 +37,7 @@
 		    		<div>
 		    			<a href="/user/point" onclick="return loginCheck();">
 	                       	<span class="img_box">
-	                       		<img src="/img/icon11.png" alt="포인트">
+	                       		<img src="resources/img/icon11.png" alt="포인트">
 	                       	</span>
 	                       	<span>포인트</span>
 	                  	</a>
@@ -47,7 +47,7 @@
 		    		<div>
 		    			<a class="updating" href="/myPage/coupon" onclick="return false;">
 	               		  	<span class="img_box">
-	                			<img src="/img/icon22.png" alt="쿠폰함">
+	                			<img src="resources/img/icon22.png" alt="쿠폰함">
 	               			</span>
 	               			<span>쿠폰함</span>
 	              		</a>
@@ -57,7 +57,7 @@
 		    		<div>
 		    			<a class="updating" href="/myPage/gift" onclick="return false;">
 	                 		<span class="img_box">
-	                 			<img src="/img/icon33.png" alt="선물함">
+	                 			<img src="resources/img/icon33.png" alt="선물함">
 	                 		</span>
 	                        <span>선물함</span>
 						</a>
@@ -67,7 +67,7 @@
 		    		<div>
 						<a href="/likes/store">
 							<span class="img_box">
-								<img src="/img/icon44.png" alt="찜한가게">
+								<img src="resources/img/icon44.png" alt="찜한가게">
 							</span>
 							<span>찜한가게</span>
 						</a>
@@ -77,7 +77,7 @@
 		    		<div>
 						<a href="/orderList">
 							<span class="img_box">
-								<img src="/img/icon55.png" alt="주문내역">
+								<img src="resources/img/icon55.png" alt="주문내역">
 							</span>
 							<span>주문내역</span>
 						</a>
@@ -87,7 +87,7 @@
 		    		<div>
 						<a href="/user/myReview" onclick="return loginCheck()" >
 							<span class="img_box">
-								<img src="/img/icon66.png" alt="리뷰관리">
+								<img src="resources/img/icon66.png" alt="리뷰관리">
 							</span>
 							<span>리뷰관리</span>
 						</a>
