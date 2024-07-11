@@ -105,9 +105,9 @@ function storeList(result){
 			const storeImg = store.storeImg;
 			const storeThumb = store.storeThumb;
 			const storeName = store.storeName;
-			const deleveryTime = store.deleveryTime;
-			const minDelevery = store.minDelevery.toLocaleString();
-			const deleveryTip = store.deleveryTip.toLocaleString();
+			const deliveryTime = store.deliveryTime;
+			const minDelivery = store.minDelivery.toLocaleString();
+			const deliveryTip = store.deliveryTip.toLocaleString();
 			const score = store.score.toFixed(1);
 			const reviewCount = store.reviewCount;
 			const bossCommentCount = store.bossCommentCount;
@@ -151,10 +151,10 @@ function storeList(result){
 						</span>
 						
 						<span>
-							<span>최소주문금액 ${minDelevery }원</span>
-							<span>배달팁 ${deleveryTip }원</span>
+							<span>최소주문금액 ${minDelivery }원</span>
+							<span>배달팁 ${deliveryTip }원</span>
 						</span>
-						<span>배달시간 ${deleveryTime }분</span>
+						<span>배달시간 ${deliveryTime }분</span>
 					</a>
 				</div>
         	${isOpenHtml}

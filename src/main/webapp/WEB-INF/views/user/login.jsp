@@ -17,7 +17,8 @@
 	</c:if>
     <main>
         <div class="login_box">
-			<a href="/"><img src="/img/bamin2.png" alt="이미지" class="bm_img"></a>    
+        	
+			<a href="/"><img alt="이미지" class="bm_img" src="<c:url value='/resources/img/bamin2.png' />"></a>    
             
             <form action="${pageContext.request.contextPath}/login" method="post">
 	            <div class="input_aera"><input type="text" name="username"  value="" required placeholder="이메일을 입력해 주세요" maxlength="30" ></div>
@@ -43,7 +44,7 @@
             </form>
             
 			<div id="oauth_login">
-				<div>
+				<div>				
 					<a href="/oauth2/authorization/kakao"></a>
 				</div>
  
@@ -56,7 +57,7 @@
 				</div>
 			</div>
 			
-			<div class="join"><a href="/join" >회원 가입하러 가기</a></div>
+			<div class="join"><a href="join" >회원 가입하러 가기</a></div>
         </div>
     </main>
     

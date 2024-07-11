@@ -19,8 +19,8 @@ public class Store {
 	private String storeThumb;
 	private int openingTime;
 	private int closingTime;
-	private int minDelevery;
-	private int deleveryTime;
-	private int deleveryTip;
+	private int minDelivery;
+	private int deliveryTime;
+	private int deliveryTip;
 	private String storeDes;
 }

@@ -69,8 +69,8 @@
 						}
  
 						// 우편번호와 주소 정보를 해당 필드에 넣는다.
-						$("#deleveryAddress1").val(data.zonecode);
-						$("#deleveryAddress2").val(addr);
+						$("#deliveryAddress1").val(data.zonecode);
+						$("#deliveryAddress2").val(addr);
  
 						// 추가
 						console.log("data.zonecode = " + data.zonecode);
@@ -91,9 +91,9 @@
 						// 추가
 						
 						// 커서를 상세주소 필드로 이동한다.
-						/* document.getElementById("deleveryAddress3").focus(); */
+						/* document.getElementById("deliveryAddress3").focus(); */
 						
-						$("#deleveryAddress3").focus();
+						$("#deliveryAddress3").focus();
 						// iframe을 넣은 element를 안보이게 한다.
 						// (autoClose:false 기능을 이용한다면, 아래 코드를 제거해야 화면에서 사라지지 않는다.)
 						element_layer.style.display = 'none';

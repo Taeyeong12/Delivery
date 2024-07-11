@@ -5,47 +5,37 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.springmvc.dto.Store;
 
 @Repository
 public class StoreDAOImpl implements StoreDAO {
- 
+
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
     @Override
     public List<Store> storeList(Map<String, Object> map) {
-        String sql = "SELECT * FROM store WHERE category = ? AND storeAddress1 = ?";
-        
+        String sql = "SELECT * FROM BM_STORE WHERE CATEGORY = ? AND STORE_ADDRESS1 LIKE ?"; 
+    	
         int category = (int) map.get("category");
-        int storeAddress1 = (int) map.get("storeAddress1");
+        String storeAddress1 = map.get("address1").toString(); // Integer를 String으로 변환
         
-        return jdbcTemplate.query(sql, new Object[]{category, storeAddress1}, storeRowMapper());
+        // storeAddress1에 와일드카드 추가
+        storeAddress1 = storeAddress1 + "%"; 
+        
+        // 디버깅
+        System.out.println("With parameters: category=" + category + ", storeAddress1=" + storeAddress1);
+
+        List<Store> storeList = jdbcTemplate.query(sql, new Object[]{category, storeAddress1}, new StoreRowMapper());
+               
+        return storeList;
     }
 
-    private RowMapper<Store> storeRowMapper() {
-        return (rs, rowNum) -> {
-            Store store = new Store();
-            store.setId(rs.getLong("id"));
-            store.setCategory(rs.getInt("category"));
-            store.setStoreName(rs.getString("storeName"));
-            store.setStoreAddress1(rs.getInt("storeAddress1"));
-            store.setStoreAddress2(rs.getString("storeAddress2"));
-            store.setStoreAddress3(rs.getString("storeAddress3"));
-            store.setStorePhone(rs.getString("storePhone"));
-            store.setStoreImg(rs.getString("storeImg"));
-            store.setStoreThumb(rs.getString("storeThumb"));
-            store.setOpeningTime(rs.getInt("openingTime"));
-            store.setClosingTime(rs.getInt("closingTime"));
-            store.setMinDelevery(rs.getInt("minDelevery"));
-            store.setDeleveryTime(rs.getInt("deleveryTime"));
-            store.setDeleveryTip(rs.getInt("deleveryTip"));
-            store.setStoreDes(rs.getString("storeDes"));
-            return store;
-        };
+    @Override
+    public Store storeDetail(long storeId) {
+        String sql = "SELECT * FROM BM_STORE WHERE ID = ?";
+        return jdbcTemplate.queryForObject(sql, new Object[]{storeId}, new StoreRowMapper());
     }
 }
-
