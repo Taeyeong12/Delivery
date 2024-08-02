@@ -47,7 +47,7 @@
         </div>
     </main>
     
-    <script src="resources/js/utill/utill.js"></script>
+    <script src="resources/js/util/util.js"></script>
 	<script type="text/javascript" src="resources/js/user/join.js"></script>
 </body>
 </html>

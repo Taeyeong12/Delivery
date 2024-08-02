@@ -8,4 +8,4 @@
         <div>이메일</div>
     </div>
 </footer>
-
+<script src="<c:url value='/resources/js/util/util.js' />"></script>

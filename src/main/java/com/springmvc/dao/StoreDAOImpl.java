@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import com.springmvc.dto.Food;
+import com.springmvc.dto.FoodOption;
 import com.springmvc.dto.Store;
 
 @Repository
@@ -37,5 +39,16 @@ public class StoreDAOImpl implements StoreDAO {
     public Store storeDetail(long storeId) {
         String sql = "SELECT * FROM BM_STORE WHERE ID = ?";
         return jdbcTemplate.queryForObject(sql, new Object[]{storeId}, new StoreRowMapper());
+    }
+
+    @Override
+    public List<Food> foodList(long storeId) {
+        String sql = "SELECT * FROM BM_FOOD WHERE STORE_ID = ?";
+        return jdbcTemplate.query(sql, new Object[] { storeId }, new FoodRowMapper());
+    }
+    
+    public List<FoodOption> foodOption(int foodId) {
+        String sql = "SELECT * FROM BM_FOOD_OPTION WHERE FOOD_ID = ?";
+        return jdbcTemplate.query(sql, new FoodOptionRowMapper(), foodId);
     }
 }

@@ -7,7 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.springmvc.dto.FoodOption;
 import com.springmvc.dto.Store;
 import com.springmvc.dto.StoreDetail;
 import com.springmvc.service.StoreService;
@@ -37,5 +39,14 @@ public class StoreController {
 		model.addAttribute("store", storeDetail);
  
 		return "store/detail";
+	}
+	
+	
+	// 메뉴 클릭시 음식 추가옵션 가져오기
+	@ResponseBody
+	@GetMapping("/foodOption")
+	public List<FoodOption> menuDetail(int foodId) {
+		List<FoodOption> foodOption = storeService.foodOption(foodId);
+		return foodOption;
 	}
 }

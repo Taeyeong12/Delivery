@@ -133,7 +133,7 @@ $(document).ready(function() {
 		*/
 		const foodId = $(this).find(".food_id").val();
 		$.ajax({
-			url: "/foodOption",
+			url: "foodOption",
 			type: "get",
 			data: {foodId : foodId}
 		})
